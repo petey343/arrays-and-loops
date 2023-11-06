@@ -8,10 +8,12 @@ body {
   background-color: #464646;
 }
 
+div.todo-name,
+div.todo-date,
 p {
   color: white;
   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 input,
@@ -20,10 +22,6 @@ button {
   border: 0;
   margin-right: 5px;
   border-radius: 5px;
-}
-
-.inputdiv {
-  display: flex;
 }
 
 button {
@@ -49,4 +47,20 @@ button:hover {
   font-weight: 700;
   border: 0;
   color: white;
+}
+
+.todo-grid,
+.inputdiv {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputdiv {
+  margin-bottom: 10px;
+}
+
+.date-input {
+  cursor: pointer;
 }

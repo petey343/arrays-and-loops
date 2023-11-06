@@ -39,11 +39,15 @@ function populateList() {
         const { todoName } = todoObject;
         const { dueDate } = todoObject;
         const todoPara = `
-            <p class="todo-item">${todoName} ${dueDate}
-            <button onclick="todoList.splice(${i}, 1);
-            populateList();" class="delete-button">Delete</button>
-            </p>`;
+            <div class="todo-name">${todoName}</div> 
+            <div class="todo-date">${dueDate}</div>
+            <button onclick="deleteItem(${i})" class="delete-button">Delete</button>`;
         todoListHTML += todoPara;
     };
     todoDivElem.innerHTML = todoListHTML;
+};
+
+function deleteItem(arrayIndex) {
+    todoList.splice(arrayIndex, 1);
+    populateList();
 };
